@@ -1,0 +1,138 @@
+.listText {
+    font-size: 18;
+    margin-left: 16;
+    color: black;
+    padding-bottom: 8;
+}
+.gridTextA {
+    font-size: 18;
+    color: black;
+}
+.gridTextB {
+    font-size: 14;
+    color: gray;
+    margin-bottom: 4;
+}
+
+.eventText{
+    font-size: 15;
+    margin-left: 25;
+    color: gray;
+    padding-bottom: 8;
+}
+
+.listImage {
+    margin: 0;
+}
+
+.image-container{
+    padding-left: 10;
+    padding-right: 10;
+}
+
+/*News Icon*/
+.gridIcon {
+    font-size: 32;
+    color: #981e32;
+    vertical-align: center;
+    margin-bottom: 3
+}
+
+.eventIcon {
+    font-size: 38;
+    color: #981e32;
+    vertical-align: bottom;
+    margin-bottom: 7.25;
+    margin-left: 1;
+} 
+
+.likeText {
+    font-size: 18;
+    color: #5e6a71;
+    text-align: left;
+    margin-bottom: 5;
+    margin-left: 42.5;
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 0;
+}
+
+.heartIconButton {
+    font-size: 25;
+    color: #5e6a71;
+    text-align: left;
+    margin-bottom: 2.5;
+    margin-left: 15;
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 0;
+}
+
+.shareIconButton {
+    font-size: 28;
+    color: #981e32;
+    text-align: center;
+    margin-right: 70;
+    margin-bottom: 1;
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 0;
+}
+
+.shareText {
+    font-size: 18;
+    color: gray;
+    text-align: center;
+    margin-left: 185;
+    margin-bottom: 5;
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 0;
+}
+
+.starIconButton {
+    font-size: 25;
+    color: #5e6a71;
+    text-align: right;
+    margin-bottom: 2.5;
+    margin-right: 82.5;
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 0;
+}
+
+.favText {
+    font-size: 18;
+    color: #5e6a71;
+    text-align: right;
+    margin-bottom: 5;
+    margin-left: 332.5;
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 0;
+}
+
+.card-icon {
+    margin-left: 16;
+    vertical-align: middle;
+    font-size: 20;
+}
+
+.icon-text {
+    font-size: 16;
+}
+
+
+.divider {
+    background-color: #eff0f2;
+}
+
+#feed {
+    margin-left: 16;
+    margin-right: 16;
+    background-color: white;
+}
+
+#page {
+    background-color: #eff0f2;
+}

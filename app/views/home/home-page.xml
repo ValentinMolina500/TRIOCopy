@@ -1,0 +1,31 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="onLoaded" actionBarHidden="true">
+    <ActionBar class="helFont" title="Home" />
+
+    <TabView class="fa bottomBar" androidTabsPosition="bottom"
+        androidOffscreenTabLimit="0"
+        selectedTabTextColor="#981e32"
+        tabBackgroundColor="white">
+        <TabViewItem title="&#xf015;">
+            <Frame defaultPage="/views/home/news-page/news-page"/>
+        </TabViewItem>
+
+
+        <TabViewItem title="&#xf05a;">
+            <Frame defaultPage="/views/home/res-page/res-page"/>
+        </TabViewItem>
+
+      <TabViewItem title="&#xf073;" id="app-page">
+        <Frame id="my-app-page" defaultPage="/views/home/app-page/app-page"/>
+      </TabViewItem>
+      
+      <TabViewItem title="&#xf086;">
+        <Frame defaultPage="/views/home/messeges-page/messeges-page"  />
+      </TabViewItem>
+
+
+      <TabViewItem title="&#xf013;">
+            <Frame defaultPage="/views/home/settings-page/settings-page" />
+        </TabViewItem>
+    </TabView>
+</Page>
+

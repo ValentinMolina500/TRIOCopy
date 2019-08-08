@@ -1,0 +1,163 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatedTo="onNavigatedTo" id="page">
+  <ActionBar class="navbar" backgroundColor="#981e32">
+    <GridLayout rows="*" columns="80, *">
+      <!-- <Label row="0" col="0" class="mdi" text="&#xf04d;" tap="{{ goBack }}"/> -->
+      <StackLayout orientation="horizontal" row="0" col="0">
+        <Button class="btn-nb bg-navbar mdi back-icon" tap="{{ goBack }}" width="40" text="&#xf04d;" backgroundColor="#981e32" color="white"/>
+      </StackLayout>
+    </GridLayout>
+  </ActionBar>
+
+  <ListView id="feed" height="100%" items="{{ resources }}" itemTap="{{ onItemTap }}" loaded="{{ onListViewLoaded }}" itemTemplateSelector="resourceTemplateSelector">
+    <ListView.itemTemplates>
+      <template key="FAQ">
+        <!-- <StackLayout>
+          <StackLayout class="hr-light"></StackLayout>
+
+          <GridLayout rows="23, 22, 16" columns="14, 44, 256" width="100%" height="46" backgroundColor="white">
+            <Label class="gridTextA Roboto" col="2" row="0" text="{{ from || type }}" />
+            <Label col="2" row="1" class="gridTextB Roboto" text="Posted 14 hrs ago" />
+            <Label class="mdi gridIcon" col="1" row="0" rowSpan="2" text="&#xf78a;" />
+          </GridLayout>
+
+          <StackLayout style="margin-top:6;" class="image-container">
+            <Label class="listText bold-text" text="{{ title }}" textWrap="true"/>
+            <Image class="list-image" stretch="aspectFill" src="{{ image || '~/images/trioLogo.png' }}" />
+          </StackLayout>
+
+          <StackLayout orientation="horizontal" height="46" width="100%">
+          </StackLayout>
+
+          <StackLayout class="hr-light"></StackLayout>
+          <StackLayout height="2" backgroundColor="#DCDCDC"></StackLayout>
+        </StackLayout> -->
+
+        <StackLayout>
+            <GridLayout columns="auto, *" rows="auto, auto, auto, auto">
+              <StackLayout height="auto" col="0" row="0">
+                <Label class="mdi" style="padding-left: 8; padding-top: 8; padding-bottom: 8; color: #981e32; font-size: 36;" text="&#xf78a;" />
+              </StackLayout>
+              <StackLayout style="padding-left: 8; padding-top: 8; padding-bottom: 8; color: black" height="auto" col="1" row="0">
+                <Label style="font-size: 16;" text="News" />
+                <Label style="font-size: 14; color: gray;" text="Posted 14 hrs ago" />
+              </StackLayout>
+              <StackLayout col="0" row="1" colSpan="2">
+                <Label style="margin-left: 8; font-size: 18; color: black; font-weight: bold; margin-bottom: 8;" text="{{ title }}" textWrap="true"/>
+                <Image class="list-image" src="{{ image || '~/images/trioLogo.png' }}" />
+              </StackLayout>
+              <FlexboxLayout col="0" row="2" colSpan="2" flexDirection="row-reverse" width="100%" justifyContent="space-between" style="font-size: 24; 
+                padding-top: 8; padding-bottom: 8; padding-left: 8; padding-right: 8">
+                <Label>
+                  <FormattedString>
+                    <Span class="mdi heart-icon" text="&#xf2d1;"/>
+                    <Span text=" 55 likes" style="font-size: 16; margin-bottom: 8"/>
+                  </FormattedString>
+                </Label>
+                <Label class="mdi share-icon" text="&#xf496;"/>
+                <Label class="mdi star-icon" text="&#xf4ce;"/>
+              </FlexboxLayout>
+            </GridLayout>
+            <StackLayout col="0" row="3" colSpan="2" height="16" class="divider"/>
+          </StackLayout>
+      </template>
+
+      <template key="Financial Aid">
+        <StackLayout>
+          <StackLayout class="hr-light"></StackLayout>
+
+          <GridLayout rows="23, 22, 16" columns="14, 44, 256" width="100%" height="46" backgroundColor="white">
+            <Label class="gridTextA Roboto" col="2" row="0" text="{{ from || type }}" />
+            <Label col="2" row="1" class="gridTextB Roboto" text="Posted 14 hrs ago" />
+            <Label class="mdi gridIcon" col="1" row="0" rowSpan="2" text="&#xf1b3;" />
+          </GridLayout>
+
+          <StackLayout style="margin-top:6;" class="image-container">
+            <Label class="listText bold-text" text="{{ title }}" textWrap="true"/>
+            <Image class="list-image" stretch="aspectFill" src="{{ image || '~/images/trioLogo.png' }}" />
+          </StackLayout>
+
+          <StackLayout orientation="horizontal" height="46" width="100%">
+          </StackLayout>
+
+          <StackLayout class="hr-light"></StackLayout>
+          <StackLayout height="2" backgroundColor="#DCDCDC"></StackLayout>
+        </StackLayout>
+      </template>
+
+      <template key="Resource">
+        <StackLayout>
+          <StackLayout class="hr-light"></StackLayout>
+
+          <GridLayout rows="23, 22, 16" columns="14, 44, 256" width="100%" height="46" backgroundColor="white">
+            <Label class="gridTextA Roboto" col="2" row="0" text="{{ from || type }}" />
+            <Label col="2" row="1" class="gridTextB Roboto" text="Posted 14 hrs ago" />
+            <Label class="mdi gridIcon" col="1" row="0" rowSpan="2" text="&#xf6e0;" />
+          </GridLayout>
+
+          <StackLayout style="margin-top:6;" class="image-container">
+            <Label class="listText bold-text" text="{{ title }}" textWrap="true"/>
+            <Image class="list-image" stretch="aspectFill" src="{{ image || '~/images/trioLogo.png' }}" />
+          </StackLayout>
+
+          <StackLayout orientation="horizontal" height="46" width="100%">
+          </StackLayout>
+
+          <StackLayout class="hr-light"></StackLayout>
+          <StackLayout height="2" backgroundColor="#DCDCDC"></StackLayout>
+        </StackLayout>
+      </template>
+
+      <template key="Browse All">
+        <!-- <StackLayout>
+          <StackLayout class="hr-light"></StackLayout>
+
+          <GridLayout rows="23, 22, 16" columns="14, 44, 256" width="100%" height="46" backgroundColor="white">
+            <Label class="gridTextA Roboto" col="2" row="0" text="{{ from || type }}" />
+            <Label col="2" row="1" class="gridTextB Roboto" text="Posted 14 hrs ago" />
+            <Label class="mdi gridIcon" col="1" row="0" rowSpan="2" text="&#xf349;" />
+          </GridLayout>
+
+          <StackLayout style="margin-top:6;" class="image-container">
+            <Label class="listText bold-text" text="{{ title }}" textWrap="true"/>
+            <Image class="list-image" stretch="aspectFill" src="{{ image || '~/images/trioLogo.png' }}" />
+          </StackLayout>
+
+          <StackLayout orientation="horizontal" height="46" width="100%">
+          </StackLayout>
+
+          <StackLayout class="hr-light"></StackLayout>
+          <StackLayout height="2" backgroundColor="#DCDCDC"></StackLayout>
+        </StackLayout> -->
+
+        <StackLayout>
+            <GridLayout columns="auto, *" rows="auto, auto, auto, auto">
+              <StackLayout height="auto" col="0" row="0">
+                <Label class="mdi" style="padding-left: 8; padding-top: 8; padding-bottom: 8; color: #981e32; font-size: 36;" text="&#xf349;" />
+              </StackLayout>
+              <StackLayout style="padding-left: 8; padding-top: 8; padding-bottom: 8; color: black" height="auto" col="1" row="0">
+                <Label style="font-size: 16;" text="News" />
+                <Label style="font-size: 14; color: gray;" text="Posted 14 hrs ago" />
+              </StackLayout>
+              <StackLayout col="0" row="1" colSpan="2">
+                <Label style="margin-left: 8; font-size: 18; color: black; font-weight: bold; margin-bottom: 8;" text="{{ title }}" textWrap="true"/>
+                <Image class="list-image" src="{{ image || '~/images/trioLogo.png' }}" />
+              </StackLayout>
+              <FlexboxLayout col="0" row="2" colSpan="2" flexDirection="row-reverse" width="100%" justifyContent="space-between" style="font-size: 24; 
+                padding-top: 8; padding-bottom: 8; padding-left: 8; padding-right: 8">
+                <Label>
+                  <FormattedString>
+                    <Span class="mdi heart-icon" text="&#xf2d1;"/>
+                    <Span text=" 55 likes" style="font-size: 16; margin-bottom: 8"/>
+                  </FormattedString>
+                </Label>
+                <Label class="mdi share-icon" text="&#xf496;"/>
+                <Label class="mdi star-icon" text="&#xf4ce;"/>
+              </FlexboxLayout>
+            </GridLayout>
+            <StackLayout col="0" row="3" colSpan="2" height="16" class="divider"/>
+          </StackLayout>
+      </template>
+
+    </ListView.itemTemplates>
+  </ListView>
+</Page>

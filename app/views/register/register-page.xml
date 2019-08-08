@@ -1,0 +1,49 @@
+<Page navigatingTo="onNavigatedTo" class="page" xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:dd="nativescript-drop-down">
+  <ActionBar class="fa actionBar" title="Create An Account">
+      <GridLayout rows="auto, *" columns="auto, *" class="fa actionBar">
+        <button row="0" col="0" tap="{{ goBack }}" class="fa actionBarBackButton" text="&#xf053;" />
+        <Label row="0" col="0" class="h1 createAccount" text="Create An Account" textWrap="true" stretch="aspectFit" />
+      </GridLayout>
+  </ActionBar>
+    <ScrollView>
+      <StackLayout>
+        <Image class="trioLogo" src="~/views/login/login_images/trio-logo.png" stretch="aspectFit"  />
+       
+
+        <StackLayout class="form">
+          <StackLayout class="inputcontainer;" stretch="aspectFit" >
+            <TextField class="input" hint="First Name" text="{{ firstName }}" autocorrect="false"/>
+            <StackLayout class="hr-light"></StackLayout>
+            <TextField class="input" hint="Last Name" text="{{ lastName }}" autocorrect="false"/>
+            <StackLayout class="hr-light"></StackLayout>
+            <TextField class="input" hint="Student ID" text="{{ wsuId }}" keyboardType="number"/>
+            <StackLayout class="hr-light"></StackLayout>
+            <TextField class="input" hint="WSU Email"
+                text="{{ email }}" autocapitalizationType="none" autocorrect="false"/>
+            <StackLayout class="hr-light"></StackLayout>
+            <dd:DropDown class="dropdown" hint="Choose Your Major" items="{{ WSU_Majors }}" selectedIndex="null" selectedIndexChanged="{{dropDownSelectedIndexChanged}}"/>
+            <StackLayout class="hr-light"></StackLayout>
+            <TextField class="input" hint="Password"
+                text="{{ password }}" secure="true" autocorrect="false"
+                autocapitalizationType="none"/>
+            <StackLayout class="hr-light"></StackLayout>
+            <TextField class="input" hint="Confirm Password"
+                secure="true" autocorrect="false"
+                text="{{ confirmPassword }}" autocapitalizationType="none"/>
+            <StackLayout class="hr-light"></StackLayout>
+            <Label class="sign-up-label helFont" tap="{{ register }}">
+            </Label>
+          </StackLayout>
+          <StackLayout>
+            <Button class="btn btn-primary btn-active" text="Register" tap="{{ register }}"/>
+          </StackLayout>
+          <Label class="applyNow" tap="{{ onLinkTap }}">
+            <FormattedString>
+              <Span text="Not A TRiO Student Yet?" style="color:black;"></Span>
+              <Span text=" Apply Now!" class="bold" ></Span>
+            </FormattedString>
+          </Label>
+        </StackLayout>
+      </StackLayout>
+    </ScrollView>
+  </Page>

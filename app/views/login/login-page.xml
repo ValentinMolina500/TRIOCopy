@@ -1,0 +1,24 @@
+<Page class="page" loaded="onNavigating" xmlns="http://schemas.nativescript.org/tns.xsd" actionBarHidden="true">
+    <ScrollView>
+        <StackLayout class="form">
+            <Image class="wsutcLogo" src="~/views/login/login_images/wsutc.png" />
+            <Image class="trioLogo" src="~/views/login/login_images/trio-logo.png" stretch="aspectFit" />
+            <StackLayout class="inputContainer">
+                <TextField class="input helFont" text="{{ email }}" hint="Email" keyboardType="email" autocorrect="false" autocapitalizationType="none" />
+                <StackLayout class="hr-light"></StackLayout>
+                <TextField class="input helFont" text="{{ password }}" hint="Password" secure="true" autocorrect="false" autocapitalizationType="none" />
+                <StackLayout class="hr-light"></StackLayout>
+            </StackLayout>
+            <StackLayout>
+                <Button class="btn btn-primary btn-active btn-rounded-sm" text="Log In" tap="{{ login }}" />
+            </StackLayout>
+            <Label text="Forgot your password?" class="login-label helFont" tap="{{ forgotPassword }}"></Label>
+            <Label class="sign-up-label helFont" tap="{{ register }}">
+                <FormattedString>
+                    <Span text="Don’t have an account?"></Span>
+                    <Span text=" Sign up" class="bold"></Span>
+                </FormattedString>
+            </Label>
+        </StackLayout>
+    </ScrollView>
+</Page>

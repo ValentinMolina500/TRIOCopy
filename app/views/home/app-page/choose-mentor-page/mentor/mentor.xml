@@ -1,0 +1,48 @@
+<Page navigatingTo="onNavigatingTo" backgroundColor="white" 
+    xmlns:lv="nativescript-ui-listview" 
+    xmlns:RL="nativescript-ripple">
+    <ActionBar backgroundColor="#981e32" color="white">
+        <GridLayout>
+            <FlexboxLayout justifyContent="space-between">
+                <RL:Ripple tap="{{ goBack }}">
+                    <Label class="mdi" text="&#xf04d;"/>
+                </RL:Ripple>
+
+                <Label style="font-weight: bold; font-size: 20; margin-right: 16;" text="{{ advisorName }}"/>
+                <Label class="mdi" text=""/>
+            </FlexboxLayout>
+        </GridLayout>
+    </ActionBar>
+
+    <lv:RadListView id="feed" items="{{ mentorArray }}" backgroundColor="white" loaded="onListViewLoaded" rowHeight="auto" itemTap="{{ onAdvisorTap }}">
+        <lv:RadListView.itemTemplate>
+            <GridLayout columns="auto, 3*" rows="auto, auto, auto, 10">
+                <StackLayout col="0" row="0" class="image-container">
+                <Image class="mentor-image" src="~/images/blank-profile-image.png" stretch="aspectFill"/>
+                </StackLayout>
+                <StackLayout col="1" row="0" class="info-container">
+                    <Label class="mentor-name" text="{{ firstName + ' ' + lastName }}" />
+                    <Label class="mentor-email" text="{{ email }}" /> 
+                    <Label class="mentor-hour" text="{{ info.hours }}" />
+                    <Label class="mentor-course" text="{{ info.maincourse }}" />
+                </StackLayout>
+
+                <StackLayout col="0" row="1" colSpan="2">
+                    <Label class="mentor-profile" text="Profile" />
+                    <Label class="mentor-description" text="{{ info.description }}" textWrap="true" />
+                </StackLayout>
+
+                <FlexboxLayout col="0" row="2" colSpan="2" flexDirection="row-reverse" visibility="{{ dropDownOpen ? 'collapse' : 'visible' }}">
+                    <Button loaded="buttonLoaded" class="btn-nb more-button">
+                        <FormattedString class="bg-clear">
+                            <Span class="mdi more-icon" text="&#xf140;"/>
+                            <Span text=" More"/>
+                        </FormattedString>
+                    </Button>
+                </FlexboxLayout>
+                <StackLayout  col="0" colSpan="2" row="3" class="hr-light"/>
+            </GridLayout>
+
+        </lv:RadListView.itemTemplate>
+    </lv:RadListView>
+</Page>

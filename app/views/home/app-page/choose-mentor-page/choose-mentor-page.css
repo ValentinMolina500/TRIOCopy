@@ -1,0 +1,76 @@
+.advisors {
+    text-align: center;
+    font-size: 40;
+    color: #981e32;
+    margin-top: 15;
+}
+
+.advisorsText {
+    text-align: center;
+    font-size: 25;
+    color: #981e32;
+    margin-top: 10;
+}
+
+.advisorsBox {
+    border-color: #DCDCDC;
+    background-color: white;
+    margin-left: 10;
+    margin-right: 10;
+    margin-top: 10;
+}
+
+.tutors {
+    text-align: center;
+    font-size: 40;
+    color: #981e32;
+    margin-top: 15;
+}
+
+.tutorsText {
+    text-align: center;
+    font-size: 25;
+    color: #981e32;
+    margin-top: 10;
+}
+
+.tutorsBox {
+    border-color: #DCDCDC;
+    background-color: white;
+    margin-left: 10;
+    margin-right: 10;
+}
+
+.supInt {
+    text-align: center;
+    font-size: 40;
+    color: #981e32;
+    margin-top: 15;
+}
+
+.supIntText {
+    text-align: center;
+    font-size: 25;
+    color: black;
+    margin-top: 10;
+}
+
+.supIntBox {
+    border-color: #DCDCDC;
+    background-color: white;
+    margin-left: 10;
+    margin-right: 10;
+    margin-top: 10;
+}
+
+.title_text {
+    color: black;
+    font-size: 20;
+    margin-top: 12.5;
+}
+
+/* .button-container {
+    margin-left: 10;
+    margin-right: 10;
+    margin-top: 10;
+} */

@@ -1,0 +1,17 @@
+.message-input {
+    font-size: 16;
+    margin-top: 8;
+    border-radius: 3;
+    border-width: 1;
+    border-color: #D3D3D3;
+}
+
+.subject-dropdown {
+    font-size: 16;
+    color: black
+}
+
+.error-text {
+    font-size: 16;
+    color: #981e32;
+}

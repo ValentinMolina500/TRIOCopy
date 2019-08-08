@@ -1,0 +1,24 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="onLoaded" actionBarHidden="true">
+
+    <StackLayout top="0" left="0" width="100%" height="100%" >
+      <Button text="Logout" class="logout" tap="{{ logout }}"/>
+      <GridLayout rows="*" columns="*" backgroundColor="white" height="33%">
+          <StackLayout row="0" backgroundColor="#981e32"></StackLayout>
+
+          <StackLayout row="0"  horizontalAlignment="center" class="setProfileVert">
+            <StackLayout>
+              <Image src="~/viewmodels/default-profile-picture/default_picture.png" height="80" width="80" class="img-circle" borderWidth="1" borderColor="white"></Image>
+              <Label text="{{Name}}" class="name text-center" textWrap="true"></Label>
+              <Label text="{{Email}}" class="email text-center" textWrap="true"></Label>
+            </StackLayout>
+            <Label text="{{wsuid}}" class="wsuid text-center" textWrap="true"></Label>
+          </StackLayout>
+        
+      </GridLayout>
+
+      <Button tap="{{ registerTutor }}" text="Register Tutor"/>
+    </StackLayout>
+
+</Page>
+
+

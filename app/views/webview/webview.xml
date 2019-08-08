@@ -1,0 +1,23 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+    xmlns:RL="nativescript-ripple" navigatedTo="onNavigatedTo">
+    <!-- <ActionBar>
+        <GridLayout rows="*" columns="40, *, 50">
+            <Button id="backButton" tap="{{ webGoBack }}" row="0" col="0" class="mdi btn-nb bg-navbar icon" text="&#xf04d;" />
+            <Button id="closeWeb" tap="{{ closeWeb }}" row="0" col="2" class="mdi btn-nb bg-navbar icon" text="&#xf156;" />
+        </GridLayout>
+    </ActionBar> -->
+
+    <ActionBar backgroundColor="#981e32" color="white">
+        <GridLayout>
+            <FlexboxLayout justifyContent="space-between">
+                <RL:Ripple tap="{{ webGoBack }}">
+                    <Label class="mdi" style="font-size: 24;" text="&#xf04d;" />
+                </RL:Ripple>
+                <RL:Ripple tap="{{ closeWeb }}">
+                    <Label class="mdi" style="font-size: 24; margin-right: 16" text="&#xf156;" />
+                </RL:Ripple>
+            </FlexboxLayout>
+        </GridLayout>
+    </ActionBar>
+    <WebView id="myWebview" src="{{ link }}" loadedFinished="onWebViewLoaded" />
+</Page>

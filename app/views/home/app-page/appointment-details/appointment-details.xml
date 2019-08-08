@@ -1,0 +1,5 @@
+<Page loaded="onLoaded">
+    <GridLayout backgroundColor="red">
+        
+    </GridLayout>
+</Page>

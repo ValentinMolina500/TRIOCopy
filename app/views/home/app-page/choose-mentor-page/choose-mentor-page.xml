@@ -1,0 +1,53 @@
+<Page xlmns="http://schemas.nativescript.org/tns.xsd" loaded="onLoaded" backgroundColor="#eff0f2">
+    <ActionBar backgroundColor="#981e32" color="white" 
+        xmlns:RL="nativescript-ripple">
+        <GridLayout>
+            <FlexboxLayout justifyContent="flex-start">
+                <Label tap="{{ goBack }}" class="mdi" text="&#xf04d;"/>
+                <Label style="font-size: 20; font-weight: bold" text=" Choose Appointment"/>       
+            </FlexboxLayout>    
+        </GridLayout>
+    </ActionBar>
+    <!-- <GridLayout columns="*" rows="*, *, *" backgroundColor="#eff0f2">
+        <Button tap="{{ advisorTap }}" class="btn-nb bg-white advisorsBox" col="0" row="0" colums="*" rows="*, *">
+            <FormattedString class="bg-clear">
+                <Span class="mdi advisors" text="&#xf64a;&#x000a;"/>
+                <Span class="advisorsText" text="Advisors"/>
+            </FormattedString>
+        </Button>
+        <Button tap="{{ tutorTap }}" class="btn-nb bg-white tutorsBox" col="0" row="1" colums="*" rows="*, *">
+            <FormattedString class="bg-clear">
+                <Span class="mdi tutors" text="&#xf00e;&#x000a;"/>
+                <Span class="tutorsText" text="Tutors"/>
+            </FormattedString>
+        </Button>
+        <Button tap="{{ tutorTap }}" class="btn-nb bg-white tutorsBox" col="0" row="1" colums="*" rows="*, *">
+            <FormattedString class="bg-clear">
+                <Span class="mdi tutors" text="&#xf00e;&#x000a;"/>
+                <Span class="tutorsText" text="Tutors"/>
+            </FormattedString>
+        </Button>
+    </GridLayout> -->
+
+    <FlexboxLayout id="button-container" flexDirection="column">
+        <Button tap="{{ advisorTap }}" class="btn-nb bg-white advisorsBox">
+            <FormattedString class="bg-clear">
+                <Span class="mdi advisors" text="&#xf64a;&#x000a;"/>
+                <Span class="advisorsText" text="Advisors"/>
+            </FormattedString>
+        </Button>
+        <Button tap="{{ tutorTap }}" class="btn-nb bg-white tutorsBox">
+            <FormattedString class="bg-clear">
+                <Span class="mdi tutors" text="&#xf00e;&#x000a;"/>
+                <Span class="tutorsText" text="Tutors"/>
+            </FormattedString>
+        </Button>
+        <!-- <Button tap="{{ tutorTap }}" class="btn-nb bg-white tutorsBox">
+            <FormattedString class="bg-clear">
+                <Span class="mdi tutors" text="&#xf00e;&#x000a;"/>
+                <Span class="tutorsText" text="Tutors"/>
+            </FormattedString>
+        </Button> -->
+    </FlexboxLayout>
+</Page>
+

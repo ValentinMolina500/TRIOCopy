@@ -1,0 +1,93 @@
+.advisorName {
+    text-align: center;
+    color: black;
+}
+
+.advisorNameTest {
+    text-align: center;
+    color: black;
+    /*margin-bottom: 15;*/
+    font-size: 36;
+    /* background-color: white; */
+    vertical-align: center;
+}
+
+.top {
+    border-bottom-width: 1;
+    border-color: #D3D3D3;
+}
+
+.mentor-image{
+    width: 70;
+    height: 70;
+    border-radius: 100%;
+    alt: "rounded image";
+    box-sizing: border-box;
+    border-width: 0.3;
+    border-color:  #D3D3D3;
+}
+
+.mentor-name{
+    color: #981e32;
+    font-size: 20;
+    margin-top: 16; 
+}
+.mentor-email{
+    color:black;
+    font-size: 14;
+}
+
+.mentor-hour{
+    color: black;
+    font-size: 14;
+}
+
+.mentor-course{
+    color: black;
+    font-size: 14;
+}
+
+.mentor-profile{
+    color: #981e32;
+    font-size: 14;
+    margin-left:16;
+    font-weight: bold;
+}
+.mentor-description{
+    color: black;
+    margin-left: 16;
+    font-size: 14;
+}
+
+.image-container {
+    padding-left: 16;
+    padding-right: 16;
+    margin-top: 16;
+    padding-bottom: 16;
+}
+
+.rate-button {
+    background-color: #981e32;
+    color: white;
+    margin-right: 8;
+    font-size: 16;
+    margin-top: 8;
+    width: 85;
+    height: 40;
+    margin-bottom: 8;
+}
+.more-button {
+    background-color: #981e32;
+    color: white;
+    margin-right: 8;
+    font-size: 16;
+    margin-top: 8;
+    width: 85;
+    height: 40;
+    margin-bottom: 8;
+}
+
+#feed {
+    margin-left: 16;
+    margin-right: 16;
+}

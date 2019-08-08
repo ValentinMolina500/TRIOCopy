@@ -1,0 +1,10 @@
+{
+    "main": "app.js",
+    "android": {
+        "v8Flags": "--expose_gc"
+    },
+    "dependencies": {
+        "g": "^2.0.1",
+        "tns": "^0.2.0"
+    }
+}

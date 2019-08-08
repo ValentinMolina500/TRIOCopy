@@ -1,0 +1,10 @@
+<Page loaded="onLoaded">
+    <GridLayout columns="*" rows="50, *" id="test">
+
+        <Frame col="0" row="0" rowSpan="2" id="topmost" defaultPage="views/home/home-page"></Frame>
+
+        <StackLayout visibility="{{ messageRecieved ? 'visible' : 'collapse' }}" row="1" height="auto"  id="help-text" style="margin: 16;  vertical-align: top" >
+            <Label style="padding: 5; font-size: 16; font-weight: bold; color: white" text="{{ message }}"/>
+        </StackLayout>
+    </GridLayout>
+</Page>

@@ -1,0 +1,49 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+    xmlns:RL="nativescript-ripple" actionBarHidden="false" loaded="onLoaded">
+    <ActionBar backgroundColor="#981e32" color="white">
+        <GridLayout>
+            <FlexboxLayout justifyContent="space-between">
+                <Label style="font-weight: bold; font-size: 20" text="Resources"/>
+            </FlexboxLayout>
+        </GridLayout>
+    </ActionBar>
+
+
+
+
+    <GridLayout columns="*, *" rows="*, *" backgroundColor="#eff0f2">
+        <GridLayout id="FAQ" tap="{{ onQATap }}" class="resCard" col="0" row="0" colums="*" rows="*">
+            <Button class="btn-nb bg-white back-icon" tap="{{ onQATap }}">
+                <FormattedString class="bg-clear">
+                    <Span class="mdi quest" text="&#xf816;&#x000a;"/>
+                    <Span class="resText" text="FAQ"/>
+                </FormattedString>
+            </Button>
+        </GridLayout>
+        <GridLayout id="Aid" tap="{{ onQATap }}" class="resCard2" col="1" row="0" colums="*" rows="*">
+            <Button class="btn-nb bg-white" tap="{{ onQATap }}">
+                <FormattedString class="bg-clear">
+                    <Span class="mdi money" text="&#xf116;&#x000a;"/>
+                    <Span class="resText" text="Financial Aid"/>
+                </FormattedString>
+            </Button>
+        </GridLayout>
+        <GridLayout id="WSU" class="resCard3" col="0" row="1" colums="*" rows="*">
+            <RL:Ripple row="0" rowSpan="1" tap="{{ onQATap }}">
+                <GridLayout columns="*" rows="*, *">
+                    <Image rowSpan="2" col="0" row="0" class="wsu_logo" src="~/views/login/login_images/wsu-cougarhead.png"/>
+                    <Label col="0" row="1" class="resText" text="WSU Resources" />
+                </GridLayout>
+            </RL:Ripple>
+        </GridLayout>
+        <GridLayout id="Browse" tap="{{ onQATap }}" class="resCard4" col="1" row="1" colums="*" rows="*">
+            <Button class="btn-nb bg-white" tap="{{ onQATap }}">
+                <FormattedString class="bg-clear">
+                    <Span class="mdi mag" text="&#xf349;&#x000a;"/>
+                    <Span class="resText" text="Browse All"/>
+                </FormattedString>
+            </Button>
+        </GridLayout>
+    </GridLayout>
+
+</Page>

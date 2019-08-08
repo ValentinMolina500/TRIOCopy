@@ -1,0 +1,64 @@
+
+.page {
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+}
+.form {
+  margin-left: 30;
+  margin-right: 30;
+  flex-grow: 2;
+  vertical-align: middle;
+}
+
+.wsutcLogo {
+    margin-top: 5;
+    margin-bottom: 5;
+    height: 120;
+}
+
+.trioLogo {
+  margin-top: 5;
+  margin-bottom: 20;
+  height: 120;
+}
+
+
+.inputContainer{
+  background-color: white;
+  margin-bottom: 10;
+  border-radius: 20;
+  padding: 20;
+}
+.input {
+  font-size: 18;
+  placeholder-color: #A8A8A8;
+}
+
+.btn-primary.btn-active:highlighted {
+  background-color: maroon;
+}
+
+.btn-primary {
+  height: 50;
+  margin: 30 5 15 5;
+  background-color: #981e32;
+  border-radius: 5;
+  font-size: 20;
+  font-weight: 600;
+}
+.login-label {
+ horizontal-align: center;
+  color: #5e6a71;
+  font-size: 16;
+  margin-top: 10;
+}
+.sign-up-label {
+  horizontal-align: center;
+  color: #5e6a71;
+  font-size: 16;
+  margin-bottom: 0;
+}
+.bold {
+  color: #981e32; 
+}

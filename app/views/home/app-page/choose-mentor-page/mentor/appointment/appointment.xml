@@ -1,0 +1,73 @@
+<Page loaded="onLoaded" 
+  xmlns:lv="nativescript-ui-listview" actionBarHidden="false" 
+  xmlns:RL="nativescript-ripple">
+
+  <ActionBar id="month-text" backgroundColor="#981e32" color="white" 
+    xmlns:RL="nativescript-ripple">
+    <GridLayout>
+      <FlexboxLayout justifyContent="space-between">
+        <RL:Ripple tap="{{ goBack }}">
+          <Label class="mdi" text="&#xf04d;"/>
+        </RL:Ripple>
+
+        <Label style="font-weight: bold; font-size: 20; margin-right: 16;" text="{{ month }}"/>
+        <Label class="mdi" text=""/>
+      </FlexboxLayout>
+    </GridLayout>
+  </ActionBar>
+
+
+  <!-- <GridLayout height="100%" width="100%" columns="*" rows="*"> -->
+
+  <ScrollView>
+    <Repeater loaded="onListViewLoaded" id="date-container" visibility="visible"  items="{{ calendarItems }}">>
+      <Repeater.itemTemplate>
+        <GridLayout columns="*, 3*" rows="auto, auto, auto" id="test"   >
+          <StackLayout height="auto" col="0" row="1" style="margin-top: 16;">
+            <Label text="{{ date }}" style="color: black; font-size: 24; margin-left: 16;"/>
+            <Label text="{{ day }}" style="color: gray; font-size: 12; margin-left: 16;"/>
+            <StackLayout visiblity="{{ today ? 'visible' : 'collapse' }}" style=" {{ today ? 'margin-bottom: 16' : '' }}">
+              <Label style="color: #00a5bd; font-size: 12; margin-left:16;">
+                <FormattedString>
+                  <Span class="mdi" text="{{ today ? '&#xf599;' : '' }}"/>
+                  <Span text="{{ today ? ' Today' : '' }}"/>
+                </FormattedString>
+              </Label>
+            </StackLayout>
+          </StackLayout>
+
+          <lv:RadListView visibility="{{ hasItems ? 'visible' : 'collapse' }}" id="{{ id }}" itemTap="{{ testing }}" items="{{ availableTimes }}" col="1" row="1" class="child-list-view">
+            <lv:RadListView.itemTemplate>
+              <StackLayout class="{{ color == 'RED' ? 'list-color-red' : (color == 'BLUE' ? 'list-color-blue' : 'list-color-yellow')}}">
+                <StackLayout class="test">
+                  <Label class="bold-text session-title" text="Session"/>
+                  <Label class="session-time" text="{{ startTimeVisible ? ( 'Start Time:  ' + startTimeVisible ) : '' }}"/>
+                  <Label class="session-time" text="{{ endTimeVisible ? ( 'End Time:    ' + endTimeVisible ) : '' }}"/>
+                </StackLayout>
+              </StackLayout>
+            </lv:RadListView.itemTemplate>
+          </lv:RadListView>
+
+          <StackLayout class="child-list-view" col="1" row="1" visibility="{{ hasItems ? 'collapse' : 'visible' }}">
+            <StackLayout class="list-color-gray">
+              <StackLayout class="test">
+                <Label class="bold-text" text="No Available Times"/>
+              </StackLayout>
+            </StackLayout>
+          </StackLayout>
+
+        </GridLayout>
+      </Repeater.itemTemplate>
+    </Repeater>
+
+
+    <!-- <FlexboxLayout visibility="collapsed" height="auto" id="help-text" style="margin: 5; opacity: 0.8; vertical-align: top" justifyContent="space-between" class="list-color-red">
+      <Label style="padding: 5; font-size: 16; font-weight: bold" text="Swipe the action bar to change the month"/>
+      <Label class="mdi" style="padding: 5; font-size: 16; font-weight: bold" text="&#xf156;"/>
+    </FlexboxLayout> -->
+  </ScrollView>
+  <!-- </GridLayout> -->
+
+
+
+</Page>

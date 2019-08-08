@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "910423929795",
+    "firebase_url": "https://wsutc-trio-app.firebaseio.com",
+    "project_id": "wsutc-trio-app",
+    "storage_bucket": "wsutc-trio-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910423929795:android:e33c3834469fba38",
+        "android_client_info": {
+          "package_name": "org.nativescript.TRIOApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "910423929795-g5mun7lidrfv94rmnlf2nunce96vltfv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTmpraiYvsYxlkaXgQrBOZfMadrroHiig"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

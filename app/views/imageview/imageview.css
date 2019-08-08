@@ -1,0 +1,15 @@
+.imageText {
+    color: white;
+    margin-left: 16;
+}
+
+.closeImageButton
+{
+    margin-right: 8;
+    font-size: 24;
+    color: white;
+}
+
+.imageActionBar {
+    background-color: #282828;
+}

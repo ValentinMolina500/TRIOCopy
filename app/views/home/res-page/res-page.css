@@ -1,0 +1,78 @@
+.money {
+    text-align: center;
+    font-size: 50;
+    vertical-align: bottom;
+    margin-bottom: 2;
+    color: #981e32;
+}
+
+.mag {
+    text-align: center;
+    font-size: 50;
+    vertical-align: bottom;
+    margin-bottom: 2;
+    color: #981e32;
+}
+
+.quest {
+    text-align: center;
+    font-size: 50;
+    vertical-align: bottom;
+    margin-bottom: 2;
+    color: #981e32;
+}
+
+.wsu_logo{
+    text-align: center;
+    width: 50;
+    height: 50;
+    margin-bottom: 30;
+    color: #981e32;
+}
+
+.resText {
+    margin-top: 16;
+    font-size: 20;
+    text-align: center;
+    color: black;
+}
+
+.resCard:highlighted{
+    background-color: #981e32;
+}
+.resCard {
+    border-color: #DCDCDC;
+    background-color: white;
+    margin-top: 10;
+    margin-bottom: 125;
+    margin-right: 2.5;
+    margin-left: 10;
+}
+
+.resCard2{
+    background-color: white;
+    margin-top: 10;
+    margin-bottom: 125;
+    margin-right: 10;
+    margin-left: 2.5;
+}
+
+.resCard3{
+    background-color: white;
+    margin-top: -120;
+    margin-bottom: 250;
+    margin-right: 2.5;
+    margin-left: 10;
+}
+
+.resCard4{
+    background-color: white;
+    margin-top: -120;
+    margin-bottom: 250;
+    margin-right: 10;
+    margin-left: 2.5;
+}
+
+.back-icon {
+    margin-left: 0;
+}

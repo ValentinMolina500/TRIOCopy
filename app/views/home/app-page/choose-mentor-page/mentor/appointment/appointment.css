@@ -1,0 +1,147 @@
+.center {
+    text-align: center;
+    vertical-align: middle;
+}
+
+#date-container {
+    
+}
+
+.dateText {
+    font-size: 28;
+    margin-left: 16;
+    text-align: left;
+    vertical-align: bottom;
+    margin-bottom: 4;
+}
+
+.month {
+    font-size: 32;
+    text-align: center;
+    vertical-align: bottom;
+    margin-bottom: 4;
+}
+
+.dateButtonLeft {
+    font-size: 32;
+    text-align: right;
+    margin-right: 64;
+    vertical-align: bottom;
+    margin-bottom: 4;
+    width: auto;
+}
+
+.dateButtonRight {
+    font-size: 32;
+    text-align: right;
+    margin-right: 16;
+    vertical-align: bottom;
+    margin-bottom: 4;
+}
+
+.listText {
+    font-size: 30;
+}
+
+/* ListView {
+	animation-name: example;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+}
+
+
+@keyframes example {
+	0% {
+        opacity: 0;
+        transform: translate(0,250);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+} */
+
+.child-list-view-item {
+    color: black;
+    margin-left: 16;
+    margin-top: 16;
+    padding-bottom: 16;
+    font-size: 20;
+}
+
+
+.child-list-view {
+    margin-top: 16;
+    margin-right: 16 !important;
+    height: auto;
+}
+
+.list-color-red {
+    color: white;
+    background-color: #c60c30;
+    height: auto;
+    margin-bottom: 8;
+    border-radius: 3
+}
+
+.list-color-blue {
+    color: white;
+    background-color: #00a5bd;
+    height: auto;
+    margin-bottom: 8;
+    border-radius: 3
+
+}
+
+.list-color-yellow {
+    color: white;
+    background-color: #ffb81c;
+    height: auto;
+    margin-bottom: 8;
+    border-radius: 3
+}
+
+.list-color-gray {
+    background-color: #5e6a71;
+    height: auto;
+    margin-bottom: 16;
+    border-radius: 3;
+    color: white;
+}
+
+.month-text {
+    color: white;
+    font-weight: bold;
+    padding-left: 12;
+    padding-top: 12;
+    padding-bottom: 12;
+    padding-right: 12;
+    font-size: 24;
+    background-color: #981e32;
+}
+
+.test {
+    font-size: 12;
+    height: auto;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-bottom: 0 !important;
+
+    padding-left: 8;
+    padding-top: 8;
+    padding-bottom: 8;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.session-time {
+    font-size: 12;
+    font-weight: bold;
+}
+
+.session-title {
+    font-size: 12;
+    
+}

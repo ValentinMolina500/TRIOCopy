@@ -1,0 +1,188 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="onLoaded" 
+  xmlns:RL="nativescript-ripple" 
+  xmlns:lv="nativescript-ui-listview" actionBarHidden="false" backgroundColor="#eff0f2">
+
+  <ActionBar backgroundColor="#981e32" color="white">
+    <GridLayout>
+      <FlexboxLayout justifyContent="space-between">
+        <Label style="font-weight: bold; font-size: 20" text="News and Events"/>
+      </FlexboxLayout>
+    </GridLayout>
+  </ActionBar>
+
+  <GridLayout>
+
+    <ListView id="feed" height="100%" items="{{ events }}" itemTap="{{ onItemTap }}" loaded="onListViewLoaded" 
+    rowHeight="auto" itemTemplateSelector="typeOfEvent" visibility="collapse">
+      <ListView.itemTemplates>
+
+        <template key="Facebook">
+          <StackLayout>
+            <GridLayout rows="26, 22, 16" columns="14, 50, 256" width="100%" height="46" backgroundColor="white">
+              <Label class="gridTextA" col="2" row="0" text="{{ from || type }}" />
+              <StackLayout orientation="horizontal" col="2" row="1">
+                <Label class="gridTextB" text="Posted 14 hrs ago" />
+                <Label class="mdi dot" text="   &#xf44a;" />
+              </StackLayout>
+              <Label class="mdi facebook" col="1" row="0" rowSpan="2" style="font-size:40px; color:#8A1515" text="&#xf20d;" />
+            </GridLayout>
+            <StackLayout class="list-group-item">
+              <Label class="listText" text="{{ title }}" textWrap="true"/>
+              <Image class="list-image" src="{{ image }}" />
+            </StackLayout>
+
+            <StackLayout orientation="horizontal" height="46" width="100%">
+              <GridLayout columns="*" width="100%">
+                <label class="mdi heartIconButton" tap="onLikeTap" col="0" verticalAlignment="bottom" horizontalAlignment="left" text="&#xf2d1;"></label>
+                <label class="likeText" col="0" verticalAlignment="bottom" horizontalAlignment="left" text="Like"/>
+                <label class="mdi shareIconButton" tap="onShareTap" col="0" verticalAlignment="bottom" horizontalAlignment="center" text="&#xf496;"></label>
+                <label class="shareText" col="0" verticalAlignment="bottom" horizontalAlignment="left" text="Share"/>
+                <label class="mdi starIconButton" tap="onFavTap" col="0" verticalAlignment="bottom" horizontalAlignment="right" text="&#xf4ce;"></label>
+                <label class="favText" col="0" verticalAlignment="bottom" horizontalAlignment="left" text="Favorite"/>
+              </GridLayout>
+            </StackLayout>
+
+            <StackLayout class="hr-light"></StackLayout>
+            <StackLayout height="10" backgroundColor="#eff0f2"></StackLayout>
+          </StackLayout>
+        </template>
+
+        <template key="Twitter">
+          <StackLayout>
+      
+            <GridLayout rows="26, 22, 16" columns="14, 50, 256" width="100%" height="46" backgroundColor="white">
+              <Label class="gridTextA" col="2" row="0" text="{{ from || type }}" />
+              <StackLayout orientation="horizontal" col="2" row="1">
+                <Label class="gridTextB" text="Posted 14 hrs ago" />
+                <Label class="mdi dot" text="   &#xf44a;" />
+              </StackLayout>
+              <Label class="mdi facebook" col="1" row="0" rowSpan="2" style="font-size:40px; color:#8A1515" text="&#xf544;" />
+            </GridLayout>
+            <StackLayout class="list-group-item">
+              <Label class="listText" text="{{ title }}" textWrap="true"/>
+              <Image class="list-image" src="{{ image }}" />
+            </StackLayout>
+
+            <StackLayout orientation="horizontal" height="46" width="100%">
+              <GridLayout columns="*" width="100%">
+                <label class="mdi heartIconButton" tap="onLikeTap" col="0" verticalAlignment="bottom" horizontalAlignment="left" text="&#xf2d1;"></label>
+                <label class="likeText" col="0" verticalAlignment="bottom" horizontalAlignment="left" text="Like"/>
+                <label class="mdi shareIconButton" tap="onShareTap" col="0" verticalAlignment="bottom" horizontalAlignment="center" text="&#xf496;"></label>
+                <label class="shareText" col="0" verticalAlignment="bottom" horizontalAlignment="left" text="Share"/>
+                <label class="mdi starIconButton" tap="onFavTap" col="0" verticalAlignment="bottom" horizontalAlignment="right" text="&#xf4ce;"></label>
+                <label class="favText" col="0" verticalAlignment="bottom" horizontalAlignment="left" text="Favorite"/>
+              </GridLayout>
+            </StackLayout>
+
+            <StackLayout class="hr-light"></StackLayout>
+            <StackLayout height="10" backgroundColor="#eff0f2"></StackLayout>
+          </StackLayout>
+        </template>
+
+        <template key="Instagram">
+          <StackLayout>
+            <GridLayout columns="auto, *" rows="auto, auto, auto, auto">
+              <StackLayout height="auto" col="0" row="0">
+                <Label class="mdi" style="padding-left: 8; padding-top: 8; padding-bottom: 8; color: #981e32; font-size: 36;" text="&#xf09e;" />
+              </StackLayout>
+              <StackLayout style="padding-left: 8; padding-top: 8; padding-bottom: 8; color: black" height="auto" col="1" row="0">
+                <Label style="font-size: 16;" text="Instagram" />
+                <Label style="font-size: 14; color: gray;" text="Posted 14 hrs ago" />
+              </StackLayout>
+              <StackLayout col="0" row="1" colSpan="2">
+                <Label style="margin-left: 8; font-size: 18; color: black; font-weight: bold; margin-bottom: 8;" text="{{ title }}" textWrap="true"/>
+                <Image class="list-image" src="{{ image || '~/images/trioLogo.png' }}" />
+              </StackLayout>
+
+              <StackLayout col="0" colSpan="2" row="2" width="100%">
+                <GridLayout columns="*" width="100%" rows="*" style="font-size: 24; padding-top: 8; padding-bottom: 8; padding-left: 8; padding-right: 8">
+                  <Label class="heart-icon-label">
+                    <FormattedString>
+                      <Span class="mdi heart-icon" text="&#xf2d1;"/>
+                      <Span text=" 55 likes" style="font-size: 16; margin-bottom: 8"/>
+                    </FormattedString>
+                  </Label>
+                  <Label class="mdi share-icon" text="&#xf496;"/>
+                  <Label class="mdi star-icon" text="&#xf4ce;"/>
+                </GridLayout>
+              </StackLayout>
+
+            </GridLayout>
+            <StackLayout col="0" row="3" colSpan="2" height="16" class="divider"/>
+          </StackLayout>
+        </template>
+
+        <template key="News">
+          <StackLayout>
+            <GridLayout columns="auto, *" rows="auto, auto, auto, auto">
+              <StackLayout height="auto" col="0" row="0">
+                <Label class="mdi" style="padding-left: 8; padding-top: 8; padding-bottom: 8; color: #981e32; font-size: 36;" text="&#xf09e;" />
+              </StackLayout>
+              <StackLayout style="padding-left: 8; padding-top: 8; padding-bottom: 8; color: black" height="auto" col="1" row="0">
+                <Label style="font-size: 16;" text="News" />
+                <Label style="font-size: 14; color: gray;" text="Posted 14 hrs ago" />
+              </StackLayout>
+              <StackLayout col="0" row="1" colSpan="2">
+                <Label style="margin-left: 8; font-size: 18; color: black; font-weight: bold; margin-bottom: 8;" text="{{ title }}" textWrap="true"/>
+                <Image class="list-image" src="{{ image || '~/images/trioLogo.png' }}" />
+              </StackLayout>
+              <StackLayout col="0" colSpan="2" row="2" width="100%">
+                <GridLayout columns="*" width="100%" rows="*" style="font-size: 24; padding-top: 8; padding-bottom: 8; padding-left: 8; padding-right: 8">
+                  <Label class="heart-icon-label">
+                    <FormattedString>
+                      <Span class="mdi heart-icon" text="&#xf2d1;"/>
+                      <Span text=" 55 likes" style="font-size: 16; margin-bottom: 8"/>
+                    </FormattedString>
+                  </Label>
+                  <Label class="mdi share-icon" text="&#xf496;"/>
+                  <Label class="mdi star-icon" text="&#xf4ce;"/>
+                </GridLayout>
+              </StackLayout>
+
+            </GridLayout>
+            <StackLayout col="0" row="3" colSpan="2" height="16" class="divider"/>
+          </StackLayout>
+        </template>
+
+
+        <template key="Events">
+          <StackLayout>
+            <GridLayout columns="auto, *" rows="auto, auto, auto, auto">
+              <StackLayout height="auto" col="0" row="0">
+                <Label class="mdi" style="padding-left: 8; padding-top: 8; padding-bottom: 8; color: #981e32; font-size: 36;" text="&#xf09e;" />
+              </StackLayout>
+              <StackLayout style="padding-left: 8; padding-top: 8; padding-bottom: 8; color: black" height="auto" col="1" row="0">
+                <Label style="font-size: 16;" text="Events" />
+                <Label style="font-size: 14; color: gray;" text="Posted 14 hrs ago" />
+              </StackLayout>
+              <StackLayout col="0" row="1" colSpan="2">
+                <Label style="margin-left: 8; font-size: 18; color: black; font-weight: bold; margin-bottom: 8;" text="{{ title }}" textWrap="true"/>
+                <Image class="list-image" src="{{ image || '~/images/trioLogo.png' }}" />
+              </StackLayout>
+              <StackLayout col="0" colSpan="2" row="2" width="100%">
+                <GridLayout columns="*" width="100%" rows="*" style="font-size: 24; padding-top: 8; padding-bottom: 8; padding-left: 8; padding-right: 8">
+                  <Label class="heart-icon-label">
+                    <FormattedString>
+                      <Span class="mdi heart-icon" text="&#xf2d1;"/>
+                      <Span text=" 55 likes" style="font-size: 16; vertical-align: center"/>
+                    </FormattedString>
+                  </Label>
+                  <Label class="mdi share-icon" text="&#xf496;"/>
+                  <Label class="mdi star-icon" text="&#xf4ce;"/>
+                </GridLayout>
+              </StackLayout>
+
+
+            </GridLayout>
+            
+            <StackLayout col="0" row="3" colSpan="2" height="16" class="divider"/>
+          </StackLayout>
+        </template>
+      </ListView.itemTemplates>
+    </ListView>
+
+    <StackLayout style="vertical-align: center">
+      <ActivityIndicator id="spinner" busy="true"/>
+    </StackLayout>
+  </GridLayout>
+</Page>

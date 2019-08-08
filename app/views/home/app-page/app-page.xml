@@ -1,0 +1,61 @@
+<Page xlmns="http://schemas.nativescript.org/tns.xsd" 
+	xmlns:lv="nativescript-ui-listview" id="main-page" navigatedTo="onLoaded">
+
+	<ActionBar backgroundColor="#981e32" color="white">
+		<GridLayout>
+			<FlexboxLayout justifyContent="space-between">
+				<Label style="font-weight: bold; font-size: 20" text="Appointments"/>
+				<Label style="margin-right: 16; font-size: 28" class="mdi" text="&#xfbaf;"/>
+			</FlexboxLayout>
+		</GridLayout>
+	</ActionBar>
+
+
+	<TabView id="tabViewContainer" androidSelectedTabHighlightColor="white" tabTextColor="white" selectedTabTextColor="white" tabBackgroundColor="#981e32">
+		<TabViewItem class="tabview-text bold" title="Upcoming" seperatorColor="white">
+			<GridLayout class="list-container " columns="*" rows="*">
+				<ListView id="upcoming-appointments" height="100%" col="0" row="0" colSpan="2" items="{{ appointments }}" itemTemplateSelector="selector" itemTap="{{ onItemTap }}" loaded="onListViewLoaded">
+					<ListView.itemTemplates>
+						<template key="regular">
+							<StackLayout class="appointments example">
+								<StackLayout class="time-container">
+									<Label class="time-indicator-text" visibility="{{ timeIndicator ? 'visible' : 'collapse' }}" text="{{ timeIndicator ? timeIndicator : '' }}"/>
+								</StackLayout>
+								<GridLayout columns="auto, auto, *" rows="auto" class="{{ lastItem ? 'final-item' : '' }}">
+									<StackLayout col="0" row="0" class="img-container">
+										<Image class="mentor-img" stretch="aspectFill" src="https://upload.wikimedia.org/wikipedia/commons/c/c0/190111_%E5%8C%97%E4%BA%AC%E5%8F%B0%E6%98%A5%E6%99%9A%E5%8F%91%E5%B8%83%E4%BC%9A.png"/>
+									</StackLayout>
+									<StackLayout class="text-container" col="1" row="0">
+										<Label class="color-black" text="{{ fullName }}"/>
+										<Label text="{{ dateString }}"/>
+										<Label text="{{ timeString }}"/>
+									</StackLayout>
+
+
+									<!-- <Label col="0" row="0" colSpan="3">
+									<FormattedString>
+										<Span class="mdi status-icon" text=" &#xfb35;"/>
+										<Span class="status-text" text="Pending yes "/>
+									</FormattedString>
+								</Label> -->
+
+									<Label col="0" row="0" colSpan="3" class="status-container status-text" text="Pending"/>
+									<Label class="mdi chevron-icon" col="0" row="0" colSpan="3" text="&#xf142;"/>
+								</GridLayout>
+							</StackLayout>
+						</template>
+					</ListView.itemTemplates>
+				</ListView>
+				<Button tap="{{ fabTap }}" id="fa-button" class="mdi fa-button btn-nb" text="&#xf415;"/>
+
+
+			</GridLayout>
+		</TabViewItem>
+		<TabViewItem class="tabview-text bold" title="Past">
+			<StackLayout>
+
+				<Label text="Past Appointments" textWrap="true" class="m-15 h2 text-left" color="blue" />
+			</StackLayout>
+		</TabViewItem>
+	</TabView>
+</Page>

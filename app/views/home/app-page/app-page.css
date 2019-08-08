@@ -1,0 +1,120 @@
+.tabview-text {
+    font-size: 16;
+}
+.bold {
+    font-weight: bold;
+}
+.test {
+    padding-left: 16;
+    padding-right: 16;
+}
+
+.mentor-img {
+    width: 70;
+    height: 70;
+    border-radius: 100%;
+    alt: "rounded image";
+    box-sizing: border-box;
+    border-width: 0.2;
+    border-color:  #981e32;
+}
+
+.img-container {
+    padding-left: 16;
+    padding-right: 16;
+    padding-top: 16;
+    padding-bottom: 16;
+    /* width: 80;
+    height: 80;
+    border-radius: 100%; */
+}
+
+.text-container {
+    padding-top: 16;
+    font-size: 14;
+}
+
+.color-black {
+    color: black;
+    font-size: 16;
+}
+
+.status-container {
+    margin-right: 16;
+    margin-top: 16;
+    horizontal-align: right;
+}
+
+.status-text {
+    color: #ffb81c;
+    font-size: 14;
+    font-weight: bold;
+}
+.status-icon {
+    font-size: 16;
+    color: #ffb81c;
+}
+.chevron-icon {
+    font-size: 28;
+    vertical-align: center;
+    horizontal-align: right;
+    margin-right: 8;
+    margin-top: 16;
+}
+
+.fa-container { 
+    vertical-align: bottom;
+    flex-direction: row-reverse;
+    margin-right: 16;
+    margin-bottom: 16;
+}
+
+.fa-button  {
+    background-color: #981e32;
+    border-radius: 100%;
+    color: white;
+    height: 56;
+    width: 56;
+    font-size: 32;
+    horizontal-align: right;
+    vertical-align: bottom;
+    margin-right: 16;
+    margin-bottom: 16;
+}
+
+#upcoming-appointments {
+    vertical-align: top;
+    width: 100%;
+    background-color: white;
+    font-weight: normal;
+}
+
+#main-page {
+    background-color: #eff0f2;
+}
+
+.list-container {
+    
+}
+.time-container {
+    background-color: #eff0f2;
+}
+.time-indicator-text {
+    padding-left: 8;
+    padding-top: 4;
+    padding-bottom: 4;
+    color: #5e6a71
+}
+.final-item {
+    padding-bottom: 72;
+}
+
+
+@keyframes example {
+    from { background-color: red; }
+    to { background-color: green; }
+}
+
+.appointments {
+   
+}

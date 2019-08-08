@@ -1,0 +1,183 @@
+.listText {
+    font-size: 18;
+    margin-left: 16;
+    color: black;
+    padding-bottom: 8;
+}
+.gridTextA {
+    font-size: 18;
+    color: black;
+}
+.gridTextB {
+    font-size: 14;
+    color: gray;
+    margin-bottom: 4;
+}
+
+.eventText{
+    font-size: 15;
+    margin-left: 25;
+    color: gray;
+    padding-bottom: 8;
+}
+
+.list-group-item {
+    margin: 0;
+}
+
+.listImage {
+    margin: 0;
+}
+
+
+.eventListImage {
+    margin-right: 12;
+    margin-top: 5;
+    height: 80;
+    width: 100;
+    border-radius: 8;
+    vertical-align: top;
+}
+
+
+/*News Icon*/
+.gridIcon {
+    font-size: 32;
+    color: #981e32;
+    vertical-align: bottom;
+    margin-bottom: 3
+}
+
+/*dot icon*/
+.dot {
+    font-size: 4;
+    vertical-align: center;
+    margin-bottom: 1;
+}
+
+.clockIcon {
+    font-size: 20;
+    vertical-align: top;
+    text-align: left;
+    margin-left: 5;
+}
+
+.pinIcon {
+    font-size: 20;
+    vertical-align: top;
+    text-align: left;
+    margin-left: 5;
+}
+
+.eventIcon {
+    font-size: 38;
+    color: #981e32;
+    vertical-align: bottom;
+    margin-bottom: 7.25;
+    margin-left: 1;
+}
+
+.likeText {
+    font-size: 18;
+    color: #5e6a71;
+    text-align: left;
+    margin-bottom: 5;
+    margin-left: 42.5;
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 0;
+}
+
+.heartIconButton {
+    font-size: 25;
+    color: #5e6a71;
+    text-align: left;
+    margin-bottom: 2.5;
+    margin-left: 15;
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 0;
+}
+
+.shareIconButton {
+    font-size: 28;
+    color: #981e32;
+    text-align: center;
+    margin-right: 70;
+    margin-bottom: 1;
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 0;
+}
+
+.shareText {
+    font-size: 18;
+    color: gray;
+    text-align: center;
+    margin-left: 185;
+    margin-bottom: 5;
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 0;
+}
+
+.starIconButton {
+    font-size: 25;
+    color: #5e6a71;
+    text-align: right;
+    margin-bottom: 2.5;
+    margin-right: 82.5;
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 0;
+}
+
+.favText {
+    font-size: 18;
+    color: #5e6a71;
+    text-align: right;
+    margin-bottom: 5;
+    margin-left: 332.5;
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 0;
+}
+
+.card-icon {
+    margin-left: 16;
+    vertical-align: middle;
+    font-size: 20;
+}
+
+.icon-text {
+    font-size: 16;
+}
+
+#feed {
+    margin-left: 8;
+    margin-right: 8;
+    background-color: white;
+    seperator-color: 'blue';
+}
+
+.heart-icon {
+    color: #981e32;
+}
+
+.share-icon {
+    color: gray;
+    horizontal-align: center;
+}
+
+.star-icon {
+    color: gray
+    
+}
+
+.divider {
+    background-color: #eff0f2;
+}
+
+.heart-icon-label {
+    horizontal-align: right;
+}

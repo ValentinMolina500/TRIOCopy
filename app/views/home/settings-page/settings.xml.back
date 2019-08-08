@@ -1,0 +1,22 @@
+<Page loaded="onLoaded" xmlns:dd="nativescript-drop-down">
+  <GridLayout rows="auto *" columns="*" sdkExampleTitle="" sdkToggleNavButton="">
+    <GridLayout row="0" col="0" rows="* *" backgroundColor="#adadad">
+      <StackLayout row="0" backgroundColor="#30bcff">
+      </StackLayout>
+      <StackLayout row="0" rowSpan="2" class="">
+        <StackLayout class="">
+          <Image src="~/viewmodels/default-profile-picture/default_picture.png" height="80" width="80" class="img-circle" borderWidth="1" borderColor="white"></Image>
+          <Label text="NativeScript" class="h2 text-center" textWrap="true"></Label>
+          <Label text="Cross-platform framework" class="h4 text-center" textWrap="true"></Label>
+        </StackLayout>
+      </StackLayout>
+    </GridLayout>
+    <GridLayout row="1" col="0">
+      <ListView class="list-group" items="" itemTap="" separatorColor="#adadad">
+          <StackLayout class="list-group-item">
+            <Label text=""></Label>
+          </StackLayout>
+      </ListView>
+    </GridLayout>
+  </GridLayout>
+</Page>

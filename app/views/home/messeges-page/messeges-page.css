@@ -1,0 +1,11 @@
+.actionBar {
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 1;
+}
+
+.actionBarTitle {
+    color:black;
+    text-align:center;
+    font-size:32px;
+}

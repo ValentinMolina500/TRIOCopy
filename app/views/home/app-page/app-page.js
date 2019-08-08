@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var app_page_view_model_1 = require("./app-page-view-model");
+var user = require('../../../viewmodels/user').I;
+function onLoaded(args) {
+    var page = args.object;
+    page.bindingContext = new app_page_view_model_1.appViewModel(page);
+}
+exports.onLoaded = onLoaded;
+function templateSelector(item, index, items) {
+    //const { uid } = user.getTotalData();
+    //return uid === item.studentId ? 'student' : 'reciever';
+    return 'student';
+}
+exports.templateSelector = templateSelector;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwLXBhZ2UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJhcHAtcGFnZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUNBLDZEQUFxRDtBQUdyRCxJQUFNLElBQUksR0FBRyxPQUFPLENBQUMsMEJBQTBCLENBQUMsQ0FBQyxDQUFrQixDQUFDO0FBRXBFLFNBQWdCLFFBQVEsQ0FBQyxJQUFJO0lBQ3pCLElBQUksSUFBSSxHQUFTLElBQUksQ0FBQyxNQUFjLENBQUM7SUFDckMsSUFBSSxDQUFDLGNBQWMsR0FBRyxJQUFJLGtDQUFZLENBQUMsSUFBSSxDQUFDLENBQUM7QUFDakQsQ0FBQztBQUhELDRCQUdDO0FBRUQsU0FBZ0IsZ0JBQWdCLENBQUMsSUFBSSxFQUFFLEtBQUssRUFBRSxLQUFLO0lBQ2xELHNDQUFzQztJQUNuQyx5REFBeUQ7SUFFekQsT0FBTyxTQUFTLENBQUM7QUFDckIsQ0FBQztBQUxELDRDQUtDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgUGFnZSB9IGZyb20gXCJ0bnMtY29yZS1tb2R1bGVzL3VpL3BhZ2VcIjtcclxuaW1wb3J0IHsgYXBwVmlld01vZGVsIH0gZnJvbSBcIi4vYXBwLXBhZ2Utdmlldy1tb2RlbFwiO1xyXG5pbXBvcnQgIFVzZXJWaWV3TW9kZWwgIGZyb20gXCIuLi8uLi8uLi92aWV3bW9kZWxzL3VzZXJcIjtcclxuXHJcbmNvbnN0IHVzZXIgPSByZXF1aXJlKCcuLi8uLi8uLi92aWV3bW9kZWxzL3VzZXInKS5JIGFzIFVzZXJWaWV3TW9kZWw7XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gb25Mb2FkZWQoYXJncykge1xyXG4gICAgbGV0IHBhZ2U6IFBhZ2UgPSBhcmdzLm9iamVjdCBhcyBQYWdlO1xyXG4gICAgcGFnZS5iaW5kaW5nQ29udGV4dCA9IG5ldyBhcHBWaWV3TW9kZWwocGFnZSk7XHJcbn1cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiB0ZW1wbGF0ZVNlbGVjdG9yKGl0ZW0sIGluZGV4LCBpdGVtcykge1xyXG5cdC8vY29uc3QgeyB1aWQgfSA9IHVzZXIuZ2V0VG90YWxEYXRhKCk7XHJcbiAgICAvL3JldHVybiB1aWQgPT09IGl0ZW0uc3R1ZGVudElkID8gJ3N0dWRlbnQnIDogJ3JlY2lldmVyJztcclxuICAgIFxyXG4gICAgcmV0dXJuICdzdHVkZW50JztcclxufSJdfQ==

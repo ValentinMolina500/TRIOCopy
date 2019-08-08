@@ -1,0 +1,67 @@
+<Page loaded="onLoaded">
+  <ActionBar backgroundColor="#981e32" color="white">
+    <GridLayout>
+      <FlexboxLayout justifyContent="space-between">
+        <Label style="font-weight: bold; font-size: 20; text-align: center;" text="Book Appointment"/>
+        <Label style="font-weight: bold; font-size: 24; margin-right: 16;" tap="{{ goBack }}" class="mdi" text="&#xf156;"/>
+      </FlexboxLayout>
+    </GridLayout>
+  </ActionBar>
+
+  <ScrollView id="main-scrollview">
+  <StackLayout style="margin-left: 16; margin-right: 16;">
+    <StackLayout>
+      <Label style="font-size: 16; margin-top: 16;">
+        <FormattedString>
+          <Span class="mdi" style="color: #981e32" text="&#xf953;"/>
+          <Span style="color: #981e32" text=" Appointment Time"/>
+        </FormattedString>
+      </Label>
+      <Label style="color: black; font-size: 16;  " text="{{ appointmentTime }}"/>
+    </StackLayout>
+
+    <StackLayout style="margin-top: 16;" class="hr-light"/>
+
+    <StackLayout style="margin-top: 16;"  style="font-size: 16;" id="checkbox-container">
+      <Label style="font-size: 16;">
+        <FormattedString>
+          <Span class="mdi" style="color: #981e32" text="&#xf474;"/>
+          <Span style="color: #981e32" text=" Subject"/>
+        </FormattedString>
+      </Label>
+    </StackLayout>
+    <Label class="error-text" visibility="{{ subjectError ? 'visible' : 'collapsed' }}">
+      <FormattedString>
+        <Span class="mdi" text="&#xf028;"/>
+        <Span text=" You must chose at least one subject!"/>
+      </FormattedString>
+    </Label>
+    <StackLayout style="margin-top: 16;" class="hr-light"/>
+
+    <StackLayout style="margin-top: 16;">
+      <Label style="color: #981e32">
+        <FormattedString>
+          <Span class="mdi" style="font-size: 16"  text="&#xfe38;"/>
+          <Span style="font-size: 16" text=" Specific Class (optional)"/>
+        </FormattedString>
+      </Label>
+      <TextView class="message-input" text="{{ specificClass }}"/>
+      
+    </StackLayout>
+    
+    <StackLayout style="margin-top: 16;" class="hr-light"/>
+
+    <StackLayout style="margin-top: 16;">
+    <Label style="color: #981e32">
+        <FormattedString>
+          <Span class="mdi" style="font-size: 16" text="&#xf369;"/>
+          <Span style="font-size: 16" text=" Message (optional)"/>
+        </FormattedString>
+      </Label>
+      <TextView class="message-input" text="{{ message }}"/>
+    </StackLayout>
+    <ActivityIndicator  style="color: #981e32" busy="{{ inProgress }}" visibility="{{ inProgress ? 'visible' : 'collapsed' }}"/>
+    <Button style="margin: 10; background-color: #981e32; color: white; border-radius: 3; font-size: 20;" tap="{{ addAppointment }}" text="Make Appointment" zIndex="0"/>
+  </StackLayout>
+  </ScrollView>
+</Page>

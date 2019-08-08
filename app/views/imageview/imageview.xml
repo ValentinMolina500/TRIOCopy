@@ -1,0 +1,17 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatedTo="onNavigatedTo"
+    xmlns:ui="nativescript-image-zoom" actionBarHidden="false" backgroundColor="black">
+
+    <ActionBar class="imageActionBar">
+        <GridLayout rows="*" columns="*, 50">
+            <Button id="closeWeb" tap="{{ goBack }}"
+                row="0" col="1" class="mdi closeImageButton imageActionBar" text="&#xf156;" />
+        </GridLayout>
+    </ActionBar>
+
+    <ui:ImageZoom src="{{ image }}" maxZoom="4" minZoom="1" />
+
+
+
+
+
+</Page>
